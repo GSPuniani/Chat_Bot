@@ -18,7 +18,7 @@ def get_bot_response(user_response):
     bot_response_negatory = []
     bot_response_ambiguous = []
 
-    # 
+    # Check which category the user_response falls into and return a random bot response from the corresponding category
     if user_response in user_response_affirmative:
         return choice(bot_response_affirmative)
     elif user_response in user_response_negatory:
@@ -29,18 +29,16 @@ def get_bot_response(user_response):
         return "Don't be afraid to take advantage of the support available to you!"
 
 
-
-
 print("Welcome to CS 1.0 Help Bot!")
-print("Do you need help with CS 1.0?")
+print("This chat bot will direct you to useful resources for CS 1.0.")
+print("Simply follow the directions and type in a response when prompted.")
+print("When you're ready to terminate the program, please enter 'done' when prompted for a response.")
 
-user_response = ""
-#TODO: we want to keep repeating until the user enters "done" what should we put here?
 while True:
-  user_response = input("How are you feeling today?: ")
+  user_response = input("Do you need help with CS 1.0?")
   
   # Quits program when user responds with 'done'
-  if user_response == 'done':
+  if user_response == "done":
     break
 
   
